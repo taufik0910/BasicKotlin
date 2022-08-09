@@ -1,7 +1,18 @@
+import  java.util.*
 fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
+   feedTheFish()
     println("Program arguments: ${args.joinToString()}")
+}
+
+fun feedTheFish() {
+    val day = randomDay()
+    val food = "pellets"
+    println ("Today is $day and the fish eat $food")
+}
+
+
+fun randomDay() : String {
+    val week = arrayOf ("Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday")
+    return week[Random().nextInt(week.size)]
 }
